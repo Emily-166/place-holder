@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       commit:
-        description: '1dc2538b5cb0c3490740e5cd2de33bb0f35eef09'
+        description: '要构建的 Commit'
         required: true
         default: 'main'
 
