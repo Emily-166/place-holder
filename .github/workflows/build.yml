@@ -5,14 +5,22 @@ on:
     branches:
       - main
   workflow_dispatch:
+    inputs:
+      commit:
+        description: '420f13069b066455c40dd7fa9c7b6e3b6cb04eb3'
+        required: true
+        default: 'main'
 
 jobs:
   build:
-    name: Build Debug APK
+    name: Build Historical APK
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v6
+      - name: Checkout source
+        uses: actions/checkout@v6
+        with:
+          ref: ${{ inputs.commit || 'main' }}
 
       - name: Set up JDK
         uses: actions/setup-java@v5
