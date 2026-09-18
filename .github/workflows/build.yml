@@ -7,7 +7,7 @@ on:
   workflow_dispatch:
     inputs:
       commit:
-        description: '420f13069b066455c40dd7fa9c7b6e3b6cb04eb3'
+        description: '1dc2538b5cb0c3490740e5cd2de33bb0f35eef09'
         required: true
         default: 'main'
 
